@@ -12,12 +12,14 @@ def sToRutsPon(listofdata,listofcarreras):
     for data in listofdata:
         if(data):
             tmpData = data.split(';')
+            
             if((int(tmpData[2])+int(tmpData[3])/2)>=450):
 
-                tmpRut = ruts
-                tmpRut.rut=tmpData[0]
+                tmpRut = ruts()
+                tmpRut.rut = tmpData[0]
 
                 for carrera in listofcarreras:
+                    print(tmpData)
                     tmpPonderado = (int(tmpData[1]) * carrera.ponderaciones[0]) + (int(tmpData[2]) * carrera.ponderaciones[1]) + (int(tmpData[3]) * carrera.ponderaciones[2]) + (int(tmpData[4]) * carrera.ponderaciones[3])
                     
                     if(int(tmpData[5])>int(tmpData[6])):
@@ -42,3 +44,4 @@ def sToRutsPon(listofdata,listofcarreras):
                     else:
                         tmpRut.carreraPondera.append((carrera.codCarrera,tmpPonderado))
                 listofruts.append(tmpRut)
+    return listofruts

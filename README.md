@@ -11,5 +11,6 @@ Servicio web soap para el consumo de puntajes psu y su organización en diversas
     * **Spyne** to Soap Connection `pip install spyne`
     * **xlml** to xml elements `pip install xlml`
     * **openpyxl** to excel management `pip install openpyxl`
+    * **pyodbc** to db management `pip install pyodbc`
 
 **WSDL definition:** http://localhost:8000/wssoap/calculadorpuntajepsu.wsdl
