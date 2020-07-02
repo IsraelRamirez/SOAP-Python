@@ -7,3 +7,5 @@ Es necesario instalar las librerias:
     spyne
     xlml
     openpyxl
+
+Definición wsdl: http://localhost:8000/wssoap/calculadorpuntajepsu.wsdl
