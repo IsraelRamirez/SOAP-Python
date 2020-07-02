@@ -1,0 +1,3 @@
+class rut:
+    rut = ""
+    carreraPondera = []
