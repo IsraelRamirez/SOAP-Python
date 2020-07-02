@@ -27,9 +27,9 @@ finalname = "Puntajes.xlsx"
 finalmime = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 
 
-class serviceSoap(ServiceBase):
+class wsSoap(ServiceBase):
     @rpc(Unicode, Unicode, Unicode, _returns = Iterable(Unicode))
-    def service(ctx,filename,mimetype,content):
+    def calculadorPuntajePsu(ctx,filename,mimetype,content):
         
         finalcontent = "S"
         yield(finalname)
@@ -37,7 +37,7 @@ class serviceSoap(ServiceBase):
         yield(finalcontent)
 
 
-application = Application( [serviceSoap ],tns = 'spyne.examples.hello.soap',in_protocol = Soap11(),out_protocol = Soap11())
+application = Application( [wsSoap ],tns = 'soap.psu.calculator',in_protocol = Soap11(),out_protocol = Soap11())
 
 if __name__ == '__main__':
     from wsgiref.simple_server import make_server
