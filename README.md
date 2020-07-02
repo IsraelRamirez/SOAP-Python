@@ -1,11 +1,15 @@
 # SOAP-Python
-Servicio web soap para el consumo de puntajes psu y su organización en diversas carreras según ciertos criterios
+## Asignatura: Computación paralela y distribuida
 
-Programa desarrollado en python 3.7.5
+Servicio web soap para el consumo de puntajes psu y su organización en diversas carreras según ciertos criterios de ordenamiento
 
-Es necesario instalar las librerias:
-    spyne
-    xlml
-    openpyxl
+### Requirements
 
-Definición wsdl: http://localhost:8000/wssoap/calculadorpuntajepsu.wsdl
+* Python **3.7.5**
+* **pip - PyPi**
+* Packages
+    * **Spyne** to Soap Connection `pip install spyne`
+    * **xlml** to xml elements `pip install xlml`
+    * **openpyxl** to excel management `pip install openpyxl`
+
+**WSDL definition:** http://localhost:8000/wssoap/calculadorpuntajepsu.wsdl
