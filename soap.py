@@ -13,11 +13,11 @@ from spyne.model.primitive import String
 
 ### Librerias externas útiles para el trabajo
 from openpyxl import Workbook
-import base64
 
 ### Librerias internas útiles para el trabajo
     ### Funciones
-
+from func.transformation import *
+from func.utils import initCarreras
     ### Clases
 from models.rut import rut as ruts
 from models.carrera import carrera as carreras
@@ -30,18 +30,27 @@ finalmime = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 class wsSoap(ServiceBase):
     @rpc(Unicode, Unicode, Unicode, _returns = Iterable(Unicode))
     def calculadorPuntajePsu(ctx,filename,mimetype,content):
-        
+        listofcarreras = initCarreras()
+        listofdata = b64toS(content)
+        listofruts = sToRutsPon(listofdata,listofcarreras)
         finalcontent = "S"
         yield(finalname)
         yield(finalmime)
         yield(finalcontent)
 
 
-application = Application( [wsSoap ],tns = 'soap.psu.calculator',in_protocol = Soap11(),out_protocol = Soap11())
+app = Application( 
+    [ wsSoap ],
+    tns = 'soap.psu.calculator',
+    in_protocol = Soap11(),
+    out_protocol = Soap11(),
+    )
 
 if __name__ == '__main__':
     from wsgiref.simple_server import make_server
-    wsgi_app = WsgiApplication(application)
+    wsgi_app = WsgiApplication(app)
     server = make_server('127.0.0.1', 8000, wsgi_app)
     print("\nServer Online")
+    print("\nctrl-LMB on http://localhost:8000/wsSoap/calculadorPuntajePsu.wsdl to wsdl definition site")
+    print("\nctrl-c to break connection")
     server.serve_forever()
