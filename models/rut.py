@@ -1,3 +1,4 @@
 class rut:
-    rut = ""
-    carreraPondera = []
+    def __init__(self):
+        self.rut = ""
+        self.carreraPondera = []
