@@ -2,7 +2,7 @@
 from models.carrera import carrera as carreras
 from models.rut import rut as ruts
 ### Librerias internas útiles
-from func.utils import indexador,indexadorSimple,isEmpty
+from func.utils import indexador,indexadorSimple
 ### Librerias externas útiles
 import base64
 
