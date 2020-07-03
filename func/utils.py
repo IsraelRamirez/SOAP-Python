@@ -2,11 +2,16 @@
 from models.carrera import carrera as carreras
 from models.rut import rut as ruts
 ### Librerias útiles
-import pyodbc
+import pg
 from openpyxl import Workbook
 import os
 
-query = "SELECT codCarrera, vacant, nem, ranking,matematica,lenguaje,histociencia, first FROM ponderado"
+query = "SELECT codCarrera, vacant, nem, ranking,matematica,lenguaje,histociencia, firsts FROM ponderados"
+# Ingresar datos de la base de datos
+dbhost = 'localhost'
+dbname = 'psudb'
+dbuser = 'psu'
+dbpsw = 'psu'
 
 # Entrega el inidice donde se debe situar la mejor carrera dentro de la listas de ponderaciones para ese rut
 # @param rut Objeto "ruts" con la información del postulante
@@ -48,10 +53,11 @@ def indexadorSimple(rut,carrera):
 # @param query sentencia SQL
 # @param devuelve los resultados de la sentencia SQL
 def dbquery(query):
-    conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ='+os.getcwd()+'/static/db/ponderadosDB.accdb;')
-    cursor = conn.cursor()
-    cursor.execute(query)
-    return cursor.fetchall()
+    
+    conn = pg.DB(host=dbhost,user=dbuser,passwd=dbpsw, dbname=dbname)
+    result = conn.query(query)
+    conn.close()
+    return result
 
 # Función que genera una lista de carreras, con el codigo de carrera correspondiente.
 # @return Devuelve una lista de las carreras inicialiazadas con el código de carrera.

@@ -5,7 +5,7 @@ Servicio web soap para el consumo de puntajes psu y su organización en diversas
 
 ### Linux-Ubuntu pre-Requeriments
 
-`sudo apt install python3-venv python3-pip unixodbc-dev`
+`sudo apt install python3-venv python3-pip`
 
 ### Requirements
 
@@ -15,6 +15,6 @@ Servicio web soap para el consumo de puntajes psu y su organización en diversas
     * **Spyne** to Soap Connection `pip install spyne` on linux-ubuntu use `pip3 install spyne`
     * **lxml** to xml elements `pip install lxml` on linux-ubuntu use `pip3 install lxml`
     * **openpyxl** to excel management `pip install openpyxl` on linux-ubuntu use `pip3 install openpyxl`
-    * **pyodbc** to db management `pip install pyodbc` on linux-ubuntu use `pip3 install pyodbc`
+    * **pygresql** to postrgresql db management `pip install pygresql` on linux-ubuntu use `pip3 install pygresql`
 
 **WSDL definition:** http://localhost:8000/wssoap/calculadorpuntajepsu.wsdl

@@ -54,7 +54,7 @@ app = Application(
 
 if __name__ == '__main__':
     from wsgiref.simple_server import make_server
-    wsgi_app = WsgiApplication(app)
+    wsgi_app = WsgiApplication(app, chunked=True, max_content_length=2097152*100,block_length=1024*1024*500)
     server = make_server('127.0.0.1', 8000, wsgi_app)
     print("\nServer Online")
     print("\nctrl-LMB on http://localhost:8000/wsSoap/calculadorPuntajePsu.wsdl to wsdl definition site")
