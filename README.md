@@ -1,7 +1,9 @@
 # SOAP-Python
-## Asignatura: Computación paralela y distribuida
+#### Asignatura: Computación paralela y distribuida
 
-Servicio web soap para el consumo de puntajes psu y su organización en diversas carreras según ciertos criterios de ordenamiento
+Servicio web soap para el consumo de puntajes psu y su organización en diversas carreras según ciertos criterios de ordenamiento.
+
+Requiere el uso de base de datos PostgreSQL, el archivo para la creación de las tablas se encuentra en la carpeta `DataBase`. Se debe cambiar los valores para la conexión a la base de datos dentro del archivo `.../SOAP-Python/func/utils.py`.
 
 ### Linux-Ubuntu pre-Requeriments
 
