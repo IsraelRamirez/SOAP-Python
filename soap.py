@@ -13,7 +13,7 @@ from spyne.model.primitive import String
 import os
     ### Funciones
 from func.transformation import *
-from func.utils import initCarreras,getExcel
+from func.utils import initCarreras, getExcel, participantes
     ### Clases
 from models.rut import rut as ruts
 from models.carrera import carrera as carreras
@@ -56,7 +56,8 @@ if __name__ == '__main__':
     from wsgiref.simple_server import make_server
     wsgi_app = WsgiApplication(app, chunked=True, max_content_length=2097152*100,block_length=1024*1024*500)
     server = make_server('127.0.0.1', 8000, wsgi_app)
-    print("\nServer Online")
+    participantes()
+    print("\n\nServer Online")
     print("\nctrl-LMB on http://localhost:8000/wsSoap/calculadorPuntajePsu.wsdl to wsdl definition site")
     print("\nctrl-c to break connection")
     server.serve_forever()

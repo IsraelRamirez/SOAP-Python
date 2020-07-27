@@ -13,6 +13,13 @@ dbname = 'psudb'
 dbuser = 'psu'
 dbpsw = 'psu'
 
+def participantes():
+    print("\n@====Participantes===@")
+    print("\n@===Israel Ramirez===@")
+    print("\n@===Humberto Roman===@")
+    print("\n@===Victor Araya=====@")
+    print("\n@====Participantes===@")
+
 # Entrega el inidice donde se debe situar la mejor carrera dentro de la listas de ponderaciones para ese rut
 # @param rut Objeto "ruts" con la información del postulante
 # @param ponderacion ponderación obtenida para una cierta carrera
