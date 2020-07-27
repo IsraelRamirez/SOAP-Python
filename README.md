@@ -8,8 +8,9 @@
 ## Asignatura: Computación paralela y distribuida
 
 Servicio web soap para el consumo de puntajes psu y su organización en diversas carreras según ciertos criterios de ordenamiento
-***
 =======
+***
+
 #### Asignatura: Computación paralela y distribuida
 
 Servicio web soap para el consumo de puntajes psu y su organización en diversas carreras según ciertos criterios de ordenamiento.
