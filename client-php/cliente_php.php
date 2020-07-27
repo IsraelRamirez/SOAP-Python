@@ -20,11 +20,11 @@ class calculadorPuntajePsu {
 /**
  * Se lee el archivo con los puntajes
  */
-$pathInputContent = ".csv"; //Ingresar la ruta del archivo 
-$filename = ".csv"; //Nombre del archivo
+$pathInputContent = "/media/compartida/puntajes2.csv"; //Ingresar la ruta del archivo 
+$filename = "puntajes2.csv"; //Nombre del archivo
 $mimetype ="text/csv";
-$host = "localhost:8080";
-$pathDeSalida = ".xlsx"; //Debe terminar el .xlsx
+$host = "localhost:8000";
+$pathDeSalida = "/media/compartida/testthreads.xlsx"; //Debe terminar el .xlsx
 
 $file = fopen($pathInputContent,"rb");
 $content = "";

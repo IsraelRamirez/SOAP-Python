@@ -1,8 +1,14 @@
 # SOAP-Python
+***
+#### Participantes:
+* Israel Ramirez
+* Humberto Román
+* Victor Araya
+***
 ## Asignatura: Computación paralela y distribuida
 
 Servicio web soap para el consumo de puntajes psu y su organización en diversas carreras según ciertos criterios de ordenamiento
-
+***
 ### Linux-Ubuntu pre-Requeriments
 
 `sudo apt install python3-venv python3-pip`
@@ -18,3 +24,4 @@ Servicio web soap para el consumo de puntajes psu y su organización en diversas
     * **pygresql** to postrgresql db management `pip install pygresql` on linux-ubuntu use `pip3 install pygresql`
 
 **WSDL definition:** http://localhost:8000/wssoap/calculadorpuntajepsu.wsdl
+***
